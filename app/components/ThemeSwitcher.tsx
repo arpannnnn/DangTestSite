@@ -1,10 +1,14 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from "react";
+import { Switch } from "@/app/components/ui/switch";
+import { Button } from "./ui/button";
 
 export function ThemeSwitcher() {
     const [isDark, setIsDark] = useState(false);
+    const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
+        setMounted(true);
         const theme = localStorage.getItem("theme");
         if (theme === "dark") {
             document.documentElement.classList.add("dark");
@@ -26,12 +30,21 @@ export function ThemeSwitcher() {
         setIsDark(!isDark);
     };
 
+    if (!mounted) {
+        return null; // Render nothing until useEffect runs
+    }
+
     return (
         <button
+            className="focus:outline-none dark:text-gray-300 "
             onClick={toggleTheme}
-            className="   dark:border-gray-600 text-black dark:text-white"
         >
-            {isDark ? "Light Mode" : "Dark Mode"}
+            <Switch checked={isDark} 
+
+            
+            />
+                
         </button>
+
     );
 }
