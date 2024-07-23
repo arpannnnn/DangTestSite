@@ -13,7 +13,7 @@ function Navbar({ className }: { className?: string }) {
     };
 
     return (
-        <div className={cn("fixed top-0 inset-x-0 max-w-full mx-auto z-50   bg-white shadow-md", className)}>
+        <div className={cn("fixed top-0 inset-x-0 max-w-full mx-auto z-10  bg-transparent", className)}>
             <div className="flex justify-between items-center p-4">
                 <div className="text-2xl text-cyan-400 md:text-4xl">
                     Test <span className="text-orange-400">Site</span>
