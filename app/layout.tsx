@@ -20,7 +20,10 @@ export default function RootLayout({
 
       <body className={inter.className}>
         <Navbar />
+        <div className="py-20">
         {children}
+        </div>
+        
       </body>
 
     </html>

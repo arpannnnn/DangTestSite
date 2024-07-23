@@ -9,7 +9,7 @@ export function ThreeDCardDemo() {
     return (
         <>
             <div className="text-3xl font-lobster text-orange-400 text-center mt-10 underline">Explore</div>
-            
+
             <div className="flex flex-col md:flex-row justify-start items-start mx-8 space-y-4 md:space-y-0 md:space-x-4">
 
                 <CardContainer className="flex flex-col mx-auto md:mx-10">
@@ -18,33 +18,38 @@ export function ThreeDCardDemo() {
                             translateZ="50"
                             className="text-xl font-bold text-neutral-600 dark:text-white"
                         >
-                            Dharapani
+                             Dang District
                         </CardItem>
                         <CardItem
                             as="p"
                             translateZ="60"
                             className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
                         >
-                            Dharapani is a quaint village situated in the Dang District of Nepal, within the Lumbini Province.
+                            Explore the beauty and charm of Dang District, Nepal, and immerse yourself in its rich cultural heritage and natural splendor.
                         </CardItem>
                         <CardItem translateZ="100" className="w-full mt-4">
                             <Image
-                                src="https://upload.wikimedia.org/wikipedia/commons/7/75/World%27s_largest_trident%28Trishul%29.jpg"
-                                height={500} // Adjusted to a more appropriate height
-                                width={500}  // Adjusted to a more appropriate width
+                                src="/map of Dang.jpg"
+                                height={500} 
+                                width={500} 
                                 className="object-cover rounded-xl group-hover/card:shadow-xl"
-                                alt="Dharapani Trident"
+                                alt="Map of Dang"
                             />
                         </CardItem>
                     </CardBody>
                 </CardContainer>
 
                 <div className="md:mt-20 md:px-20">
-                    <h1 className="text-3xl md:text-4xl font-bold text-cyan-400 dark:text-white py-8">Dharapani</h1>
+                    <h1 className="text-3xl md:text-4xl font-bold text-cyan-400 dark:text-white py-8">Dang Nepal</h1>
                     <p className="text-base text-neutral-600 dark:text-white text-justify py-4 font-semibold">
-                        Dharapani is a quaint village situated in the Dang District of Nepal, within the Lumbini Province. This rural area is characterized by its hilly terrain and lush greenery, offering a picturesque view of the natural landscape. The community in Dharapani primarily consists of various ethnic groups, reflecting the rich cultural heritage of the region. Agriculture plays a significant role in the local economy, with residents cultivating crops such as rice, maize, and vegetables. The lifestyle in Dharapani is predominantly rural, focusing on traditional practices and local crafts.
+                        Dang District, located in the mid-western region of Nepal within Lumbini Province, is a region characterized by its diverse topography and rich cultural heritage. Covering an area of approximately 2,955 square kilometers, Dang is nestled in the Inner Terai Valley, surrounded by hills and lush green forests. The district enjoys a moderate climate, with warm summers and mild winters, making it a favorable destination for agriculture and tourism. Dang is also known for its significant cultural and historical landmarks, including the revered Swargadwari temple, a major pilgrimage site. The population of Dang is a mix of various ethnic groups, contributing to the vibrant cultural mosaic of the region. Agriculture forms the backbone of the local economy, with rice, wheat, and lentils being the primary crops. Additionally, Dang's strategic location and connectivity make it an emerging hub for trade and commerce in the region. Explore the beauty and charm of Dang District, Nepal, and immerse yourself in its rich cultural heritage and natural splendor. 
 
-                        Infrastructure in Dharapani is relatively basic compared to urban centers, but efforts are ongoing to improve roads, schools, and healthcare facilities as part of regional development initiatives. The village and its surroundings are known for their natural beauty, with opportunities for trekking and exploring the scenic hills and rivers. Local attractions may include temples and historical sites, showcasing the cultural richness of the area. Overall, Dharapani offers a glimpse into the rural way of life in Nepal, combining natural charm with traditional living. Dharapani also benefits from a strong sense of community, where traditional festivals and local events play a significant role in social life, fostering a close-knit environment among residents. The village is gradually seeing improvements in connectivity and access to services, which are enhancing the quality of life for its inhabitants. Additionally, efforts are being made to promote sustainable practices and preserve the natural beauty of the area, ensuring that Dharapani remains a harmonious blend of tradition and progress.
+
+
+
+
+
+
                     </p>
                 </div>
             </div>
