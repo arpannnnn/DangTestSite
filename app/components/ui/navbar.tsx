@@ -13,6 +13,15 @@ const transition = {
     restSpeed: 0.001,
 };
 
+const Underline = ({ isVisible }: { isVisible: boolean }) => (
+    <motion.div
+        initial={{ width: 0 }}
+        animate={{ width: isVisible ? "100%" : 0 }}
+        transition={{ duration: 0.3 }}
+        className="absolute bottom-0 left-0 h-[2px] bg-black dark:bg-white"
+    />
+);
+
 export const MenuItem = ({
     setActive,
     active,
@@ -25,12 +34,16 @@ export const MenuItem = ({
     children?: React.ReactNode;
 }) => {
     return (
-        <div onMouseEnter={() => setActive(item)} className="relative ">
+        <div
+            onMouseEnter={() => setActive(item)}
+            className="relative"
+        >
             <motion.p
                 transition={{ duration: 0.3 }}
-                className="cursor-pointer text-black hover:opacity-[0.9] font-bold dark:text-white"
+                className="cursor-pointer text-black hover:opacity-[0.9] font-bold dark:text-white relative pb-2"
             >
                 {item}
+                <Underline isVisible={active === item} />
             </motion.p>
             {active !== null && (
                 <motion.div
@@ -42,13 +55,10 @@ export const MenuItem = ({
                         <div className="absolute top-[calc(100%_+_1.2rem)] left-9  transform -translate-x-1/2 pt-4">
                             <motion.div
                                 transition={transition}
-                                layoutId="active" 
+                                layoutId="active"
                                 className="bg-white dark:bg-black backdrop-blur-sm rounded-2xl overflow-hidden border border-black/[0.2] dark:border-white/[0.2] shadow-xl"
                             >
-                                <motion.div
-                                    layout 
-                                    className="w-max h-full p-4"
-                                >
+                                <motion.div layout className="w-max h-full p-4">
                                     {children}
                                 </motion.div>
                             </motion.div>
@@ -69,8 +79,8 @@ export const Menu = ({
 }) => {
     return (
         <nav
-            onMouseLeave={() => setActive(null)} // resets the state
-            className="relative rounded-full boder border-transparent bg-transparent dark:bg-black dark:border-white/[0.2]  shadow-input flex justify-center space-x-4 px-8 py-6 "
+            onMouseLeave={() => setActive(null)}
+            className="relative rounded-full border border-transparent bg-transparent dark:bg-black dark:border-white/[0.2] shadow-input flex justify-center space-x-4 px-8 py-6"
         >
             {children}
         </nav>
@@ -119,4 +129,5 @@ export const HoveredLink = ({ children, ...rest }: any) => {
         </Link>
     );
 };
+
 export default MenuItem;
