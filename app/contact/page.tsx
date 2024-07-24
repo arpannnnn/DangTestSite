@@ -4,7 +4,14 @@ import { Card, CardContent } from "../components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "../components/ui/button";
-const ContactInfo = ({ icon: Icon, title, content }) => (
+
+interface ContactInfoProps {
+    icon: React.ComponentType<{ className?: string }>;
+    title: string;
+    content: string;
+}
+
+const ContactInfo: React.FC<ContactInfoProps> = ({ icon: Icon, title, content }) => (
     <div className="flex items-start space-x-3">
         <Icon className="w-5 h-5 text-cyan-500 mt-1 flex-shrink-0" />
         <div>
@@ -14,15 +21,10 @@ const ContactInfo = ({ icon: Icon, title, content }) => (
     </div>
 );
 
-const ContactPage = () => {
-    const handleSubmit = (e: { preventDefault: () => void; }) => {
-
+const ContactPage: React.FC = () => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-
-        alert("Message sent successfully")
-
-
-        
+        alert("Message sent successfully");
     };
 
     return (
@@ -36,16 +38,16 @@ const ContactPage = () => {
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                    <Card className="lg:col-span-2 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <Card className="lg:col-span-2 mb-1 shadow-lg hover:shadow-xl transition-shadow duration-300">
                         <CardContent className="p-6">
-                            <h2 className="text-2xl font-semibold text-cyan-700 mb-6">Send Us a Message</h2>
+                            <h2 className="text-2xl font-semibold text-cyan-700 mb-8">Send Us a Message</h2>
                             <form  className="space-y-4">
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <Input placeholder="Your Name" required />
                                     <Input type="email" placeholder="Your Email" required />
                                 </div>
                                 <Input placeholder="Subject" required />
-                                <Textarea placeholder="Your Message" rows={5} required />
+                                <Textarea placeholder="Your Message" rows={8} required />
                                 <Button type="submit" className="w-full bg-cyan-600 hover:bg-cyan-700 text-white">
                                     Send Message
                                 </Button>

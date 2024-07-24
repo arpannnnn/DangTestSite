@@ -17,7 +17,15 @@ const nextConfig = {
         },
         {
             protocol: 'https',
-            hostname: 'photo.ntb.gov.np',   
+            hostname: 'photo.ntb.gov.np', 
+        },
+        {
+            protocol: 'https',
+            hostname: 'plus.unsplash.com',   
+        },
+        {
+            protocol: 'https',
+            hostname: 'cdn.gurubaa.com',   
         },]
 
     },

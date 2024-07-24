@@ -9,8 +9,13 @@ import {
   CardDescription,
 } from '../components/ui/card';
 import { Button } from '../components/ui/button';
+interface FeatureCardProps {
+  icon: React.ComponentType<{ className?: string }>;
+  title: string;
+  description: string;
+}
 
-const FeatureCard = ({ icon: Icon, title, description }) => (
+const FeatureCard :React.FC<FeatureCardProps> =({ icon: Icon, title, description }) => (
   <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
     <CardHeader>
       <CardTitle className="flex items-center text-xl font-semibold text-cyan-700 group-hover:text-cyan-500 transition-colors duration-300">

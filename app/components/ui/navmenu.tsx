@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "../ui/navbar";
 import { cn } from "../../lib/utils";
 import { ThemeSwitcher } from "../ThemeSwitcher";
+import Link from "next/link";
 
 function Navbar({ className }: { className?: string }) {
     const [active, setActive] = useState<string | null>(null);
@@ -15,10 +16,13 @@ function Navbar({ className }: { className?: string }) {
     return (
         <div className={cn("fixed top-0 inset-x-0 max-w-full mx-auto z-10  bg-transparent", className)}>
             <div className="flex justify-between items-center p-4">
+                <Link href="/"> 
+
                 <div className="text-2xl text-cyan-400 md:text-4xl">
                     Test <span className="text-orange-400">Site</span>
                 </div>
-
+                </Link>
+                
                 <div className="justify-end dark:bg-black md:hidden ">
                     <button onClick={toggleMenu} className="focus:outline-none">
                         {menuOpen ? (
@@ -42,12 +46,13 @@ function Navbar({ className }: { className?: string }) {
                             <HoveredLink href="/contact">Contact</HoveredLink>
                         </div>
                     </MenuItem>
-                    <MenuItem setActive={setActive} active={active} item="Places">
+                    <MenuItem setActive={setActive} active={active} item=" Education  ">
                         <div className="flex flex-col space-y-4 text-sm">
-                            <HoveredLink href="/web-dev">Web Development</HoveredLink>
-                            <HoveredLink href="/interface-design">Interface Design</HoveredLink>
-                            <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
-                            <HoveredLink href="/branding">Branding</HoveredLink>
+                            <HoveredLink href="/colleges">Colleges</HoveredLink>
+                            <HoveredLink href="/schools">Schools</HoveredLink>
+                            <HoveredLink href="/universities">Universities</HoveredLink>
+
+                            
                         </div>
                     </MenuItem>
                     <MenuItem setActive={setActive} active={active} item="Events">
