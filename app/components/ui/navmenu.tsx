@@ -50,29 +50,24 @@ function Navbar({ className }: { className?: string }) {
                         <div className="flex flex-col space-y-4 text-sm">
                             <HoveredLink href="/colleges">Colleges</HoveredLink>
                             <HoveredLink href="/schools">Schools</HoveredLink>
-                            <HoveredLink href="/universities">Universities</HoveredLink>
+
 
 
                         </div>
                     </MenuItem>
-                    <MenuItem setActive={setActive} active={active} item="Events">
+                    <MenuItem setActive={setActive} active={active} item=" Entertainment">
                         <div className="text-sm grid grid-cols-1 md:grid-cols-1 gap-4 p-2">
                             <ProductItem
-                                title="Algochurn"
-                                href="https://algochurn.com"
-                                src="https://assets.aceternity.com/demos/algochurn.webp"
-                                description="Prepare for tech interviews like never before."
+                                title="Cinema Hall"
+                                href="/CinemaHall"
+                                src="https://media.istockphoto.com/id/1406531590/photo/red-cinema-seats-and-cola-popcorn-and-glasses-in-empty-theater-cinema-movie-theater-concept.jpg?s=2048x2048&w=is&k=20&c=wQleptS1PQ0oibalcixd9Tl7Jde9XcscxmE1YJj1mUY="
+                                description="Discover the best movie experiences in town"
                             />
-                            <ProductItem
-                                title="Tailwind Master Kit"
-                                href="https://tailwindmasterkit.com"
-                                src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
-                                description="Production ready Tailwind css components for your next project"
-                            />
+
 
                         </div>
                     </MenuItem>
-                    <MenuItem setActive={setActive} active={active} item="Explore">
+                    <MenuItem setActive={setActive} active={active} item="Hotel">
                         <div className="flex flex-col space-y-4 text-sm">
                             <HoveredLink href="/hobby">Hobby</HoveredLink>
                             <HoveredLink href="/individual">Individual</HoveredLink>

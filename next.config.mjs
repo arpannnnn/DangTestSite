@@ -3,7 +3,7 @@ const nextConfig = {
     images: {
         remotePatterns: [{
             protocol: 'https',
-            hostname: 'assets.aceternity.com',
+            hostname: 'media.istockphoto.com',
         },
         {
             protocol: 'https',
