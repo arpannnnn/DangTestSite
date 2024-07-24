@@ -16,13 +16,13 @@ function Navbar({ className }: { className?: string }) {
     return (
         <div className={cn("fixed top-0 inset-x-0 max-w-full mx-auto z-10  bg-transparent", className)}>
             <div className="flex justify-between items-center p-4">
-                <Link href="/"> 
+                <Link href="/">
 
-                <div className="text-2xl text-cyan-400 md:text-4xl">
-                    Test <span className="text-orange-400">Site</span>
-                </div>
+                    <div className="text-2xl text-cyan-400 md:text-4xl">
+                        Test <span className="text-orange-400">Site</span>
+                    </div>
                 </Link>
-                
+
                 <div className="justify-end dark:bg-black md:hidden ">
                     <button onClick={toggleMenu} className="focus:outline-none">
                         {menuOpen ? (
@@ -52,7 +52,7 @@ function Navbar({ className }: { className?: string }) {
                             <HoveredLink href="/schools">Schools</HoveredLink>
                             <HoveredLink href="/universities">Universities</HoveredLink>
 
-                            
+
                         </div>
                     </MenuItem>
                     <MenuItem setActive={setActive} active={active} item="Events">
@@ -69,7 +69,7 @@ function Navbar({ className }: { className?: string }) {
                                 src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
                                 description="Production ready Tailwind css components for your next project"
                             />
-                           
+
                         </div>
                     </MenuItem>
                     <MenuItem setActive={setActive} active={active} item="Explore">

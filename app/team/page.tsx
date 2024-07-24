@@ -1,8 +1,16 @@
 import React from 'react';
 import { LucideLinkedin, LucideTwitter, LucideMail } from 'lucide-react';
-import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar";
+interface TeamMemberProps {
+    name: string;
+    role: string;
+    image: string;
+    bio: string;
+    linkedin?: string;
+    twitter?: string;
+    email?: string;
+}
 
-const TeamMember = ({ name, role, image, bio, linkedin, twitter, email }) => (
+const TeamMember :React.FC<TeamMemberProps>= ({ name, role, image, bio, linkedin, twitter, email }) => (
     <div className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
         <div className="aspect-w-3 aspect-h-4">
             <img className="object-cover w-full h-full" src={image} alt={name} />

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ThreeDCardDemo } from "./components/Explore";
-import { LayoutGrid } from "./components/ui/layout-grid";
+
 import { LayoutGridDemo } from "./components/Grid";
 
 
