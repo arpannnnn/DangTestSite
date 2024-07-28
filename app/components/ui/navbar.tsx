@@ -39,12 +39,15 @@ export const MenuItem = ({
             className="relative"
         >
             <motion.p
+            
                 transition={{ duration: 0.3 }}
                 className="cursor-pointer text-black hover:opacity-[0.9] font-bold dark:text-white relative pb-2"
             >
+                
                 {item}
-                <Underline isVisible={active === item} />
+                
             </motion.p>
+            <Underline isVisible={active === item} />
             {active !== null && (
                 <motion.div
                     initial={{ opacity: 0, scale: 0.85, y: 10 }}
